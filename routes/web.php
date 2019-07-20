@@ -12,10 +12,22 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.index');
 });
 
-Auth::routes();
+Route::get('/destination', function () {
+    return view('pages.destination');
+});
+
+Route::get('/tour', function () {
+    return view('pages.tour');
+});
+
+Route::get('/form', function () {
+    return view('pages.form');
+});
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
